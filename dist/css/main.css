@@ -1,0 +1,138 @@
+/* CSS Reset Start*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* CSS Reset End*/
+:root {
+  --primary-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+  --neutral-grey: hsl(0, 0%, 95%);
+  --neutral-white: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+  background-color: var(--neutral-grey);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  padding: 4em 2em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 1em;
+  overflow: hidden;
+  max-width: 1024px;
+}
+
+.sedans,
+.suv,
+.luxury {
+  padding: 3em 3em;
+}
+
+.sedans {
+  background: var(--primary-orange);
+}
+.sedans button {
+  color: var(--primary-orange);
+}
+
+.suv {
+  background: var(--primary-dark-cyan);
+}
+.suv button {
+  color: var(--primary-dark-cyan);
+}
+
+.luxury {
+  background: var(--primary-very-dark-cyan);
+}
+.luxury button {
+  color: var(--primary-very-dark-cyan);
+}
+
+.header {
+  color: var(--neutral-grey);
+  text-transform: uppercase;
+  padding: 1.5em 0;
+}
+
+.text {
+  color: var(--neutral-white);
+  line-height: 2em;
+  padding-bottom: 1.5em;
+}
+
+.btn {
+  border-radius: 1.5em;
+  background-color: var(--neutral-grey);
+  display: inline-block;
+  width: 50%;
+  border: none;
+  height: 3em;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: transparent;
+  color: var(--neutral-white);
+  border: 0.125em solid var(--neutral-white);
+}
+
+@media only screen and (min-width: 650px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 1em;
+    overflow: hidden;
+    max-width: 1024px;
+  }
+  .text {
+    padding-bottom: 4em;
+  }
+}
